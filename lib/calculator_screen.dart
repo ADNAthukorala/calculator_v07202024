@@ -31,10 +31,10 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
             // Set button radius as a fraction of the viewport height
             double btnRadius = viewportHeight * 0.056;
 
-            // Set button text size as a fraction of the viewport width
+            // Set button text size as a fraction of the viewport height
             double btnTxtSize = viewportHeight * 0.03;
 
-            // Set result display text size as a fraction of the viewport width
+            // Set result display text size as a fraction of the viewport height
             double rsltDsplyTxtSize = viewportHeight * 0.06;
 
             return Column(
@@ -49,14 +49,14 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
                     '0',
                     textAlign: TextAlign.right,
                     style: TextStyle(
-                      color: kTxtClr,
+                      color: kRsltTxtClr,
                       fontSize: rsltDsplyTxtSize,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
                 ),
 
-                /// Buttons pad
+                /// Button pad
                 Container(
                   height: btnPadHeight,
                   width: double.infinity,
@@ -123,6 +123,7 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
                               btnRadius: btnRadius,
                               btnTxtSize: btnTxtSize,
                               btnColor: kNmbrBtnClr,
+                              btnTxtColor: kNmbrBtnTxtClr,
                               onPressed: () {},
                             ),
                             CalculatorButton(
@@ -130,6 +131,7 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
                               btnRadius: btnRadius,
                               btnTxtSize: btnTxtSize,
                               btnColor: kNmbrBtnClr,
+                              btnTxtColor: kNmbrBtnTxtClr,
                               onPressed: () {},
                             ),
                             CalculatorButton(
@@ -137,6 +139,7 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
                               btnRadius: btnRadius,
                               btnTxtSize: btnTxtSize,
                               btnColor: kNmbrBtnClr,
+                              btnTxtColor: kNmbrBtnTxtClr,
                               onPressed: () {},
                             ),
                             CalculatorButton(
@@ -162,6 +165,7 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
                               btnRadius: btnRadius,
                               btnTxtSize: btnTxtSize,
                               btnColor: kNmbrBtnClr,
+                              btnTxtColor: kNmbrBtnTxtClr,
                               onPressed: () {},
                             ),
                             CalculatorButton(
@@ -169,6 +173,7 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
                               btnRadius: btnRadius,
                               btnTxtSize: btnTxtSize,
                               btnColor: kNmbrBtnClr,
+                              btnTxtColor: kNmbrBtnTxtClr,
                               onPressed: () {},
                             ),
                             CalculatorButton(
@@ -176,6 +181,7 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
                               btnRadius: btnRadius,
                               btnTxtSize: btnTxtSize,
                               btnColor: kNmbrBtnClr,
+                              btnTxtColor: kNmbrBtnTxtClr,
                               onPressed: () {},
                             ),
                             CalculatorButton(
@@ -201,6 +207,7 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
                               btnRadius: btnRadius,
                               btnTxtSize: btnTxtSize,
                               btnColor: kNmbrBtnClr,
+                              btnTxtColor: kNmbrBtnTxtClr,
                               onPressed: () {},
                             ),
                             CalculatorButton(
@@ -208,6 +215,7 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
                               btnRadius: btnRadius,
                               btnTxtSize: btnTxtSize,
                               btnColor: kNmbrBtnClr,
+                              btnTxtColor: kNmbrBtnTxtClr,
                               onPressed: () {},
                             ),
                             CalculatorButton(
@@ -215,6 +223,7 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
                               btnRadius: btnRadius,
                               btnTxtSize: btnTxtSize,
                               btnColor: kNmbrBtnClr,
+                              btnTxtColor: kNmbrBtnTxtClr,
                               onPressed: () {},
                             ),
                             CalculatorButton(
@@ -240,6 +249,7 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
                               btnRadius: btnRadius,
                               btnTxtSize: btnTxtSize,
                               btnColor: kNmbrBtnClr,
+                              btnTxtColor: kNmbrBtnTxtClr,
                               onPressed: () {},
                             ),
                             CalculatorButton(
@@ -247,6 +257,7 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
                               btnRadius: btnRadius,
                               btnTxtSize: btnTxtSize,
                               btnColor: kNmbrBtnClr,
+                              btnTxtColor: kNmbrBtnTxtClr,
                               onPressed: () {},
                             ),
                             CalculatorButton(
@@ -254,6 +265,7 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
                               btnRadius: btnRadius,
                               btnTxtSize: btnTxtSize,
                               btnColor: kNmbrBtnClr,
+                              btnTxtColor: kNmbrBtnTxtClr,
                               onPressed: () {},
                             ),
                             CalculatorButton(
@@ -261,6 +273,7 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
                               btnRadius: btnRadius,
                               btnTxtSize: btnTxtSize,
                               btnColor: kEqualBtnClr,
+                              btnTxtColor: kEqualBtnTxtClr,
                               onPressed: () {},
                             ),
                           ],
@@ -311,7 +324,7 @@ class CalculatorButton extends StatelessWidget {
         child: Text(
           btnTxt,
           style: TextStyle(
-            color: btnTxtColor ?? kTxtClr,
+            color: btnTxtColor ?? kNmbrBtnTxtClr,
             fontSize: btnTxtSize,
           ),
         ),
