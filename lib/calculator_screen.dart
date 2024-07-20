@@ -80,28 +80,32 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
                               btnTxt: 'AC',
                               btnRadius: btnRadius,
                               btnTxtSize: btnTxtSize,
-                              btnColor: kOprtnBtnClr,
+                              btnColor: kOprtrBtnClr,
+                              btnTxtColor: kAcBtnTxtClr,
                               onPressed: () {},
                             ),
                             CalculatorButton(
                               btnTxt: '+/-',
                               btnRadius: btnRadius,
                               btnTxtSize: btnTxtSize,
-                              btnColor: kOprtnBtnClr,
+                              btnColor: kOprtrBtnClr,
+                              btnTxtColor: kOprtrBtnTxtClr,
                               onPressed: () {},
                             ),
                             CalculatorButton(
                               btnTxt: '%',
                               btnRadius: btnRadius,
                               btnTxtSize: btnTxtSize,
-                              btnColor: kOprtnBtnClr,
+                              btnColor: kOprtrBtnClr,
+                              btnTxtColor: kOprtrBtnTxtClr,
                               onPressed: () {},
                             ),
                             CalculatorButton(
                               btnTxt: '÷',
                               btnRadius: btnRadius,
                               btnTxtSize: btnTxtSize,
-                              btnColor: kOprtnBtnClr,
+                              btnColor: kOprtrBtnClr,
+                              btnTxtColor: kOprtrBtnTxtClr,
                               onPressed: () {},
                             ),
                           ],
@@ -139,7 +143,8 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
                               btnTxt: 'x',
                               btnRadius: btnRadius,
                               btnTxtSize: btnTxtSize,
-                              btnColor: kOprtnBtnClr,
+                              btnColor: kOprtrBtnClr,
+                              btnTxtColor: kOprtrBtnTxtClr,
                               onPressed: () {},
                             ),
                           ],
@@ -177,7 +182,8 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
                               btnTxt: '-',
                               btnRadius: btnRadius,
                               btnTxtSize: btnTxtSize,
-                              btnColor: kOprtnBtnClr,
+                              btnColor: kOprtrBtnClr,
+                              btnTxtColor: kOprtrBtnTxtClr,
                               onPressed: () {},
                             ),
                           ],
@@ -215,7 +221,8 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
                               btnTxt: '+',
                               btnRadius: btnRadius,
                               btnTxtSize: btnTxtSize,
-                              btnColor: kOprtnBtnClr,
+                              btnColor: kOprtrBtnClr,
+                              btnTxtColor: kOprtrBtnTxtClr,
                               onPressed: () {},
                             ),
                           ],
@@ -279,14 +286,16 @@ class CalculatorButton extends StatelessWidget {
     required this.btnTxtSize,
     this.btnColor,
     required this.btnTxt,
-    this.onPressed,
+    required this.onPressed,
+    this.btnTxtColor,
   });
 
   final double btnRadius;
   final double btnTxtSize;
   final Color? btnColor;
+  final Color? btnTxtColor;
   final String btnTxt;
-  final void Function()? onPressed;
+  final void Function() onPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -302,7 +311,7 @@ class CalculatorButton extends StatelessWidget {
         child: Text(
           btnTxt,
           style: TextStyle(
-            color: kTxtClr,
+            color: btnTxtColor ?? kTxtClr,
             fontSize: btnTxtSize,
           ),
         ),
