@@ -271,6 +271,7 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
   }
 }
 
+/// Calculator button widget
 class CalculatorButton extends StatelessWidget {
   const CalculatorButton({
     super.key,
