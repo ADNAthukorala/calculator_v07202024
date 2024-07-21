@@ -317,7 +317,7 @@ class CalculatorButton extends StatelessWidget {
       child: ElevatedButton(
         onPressed: onPressed,
         style: ElevatedButton.styleFrom(
-          shape: const CircleBorder(),
+          padding: EdgeInsets.zero,
           fixedSize: Size.fromRadius(btnRadius),
           backgroundColor: btnColor ?? kNmbrBtnClr,
         ),
